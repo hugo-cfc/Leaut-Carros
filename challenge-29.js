@@ -33,11 +33,9 @@
       },
 
       headerJsonChanger: function headerJsonChanger(){
-        let headerH1Text = doc.createTextNode(ajaxJson.name) //nome
+        let headerH1Text = doc.createTextNode(ajaxJson.name)
         $h1Header.replaceChild(headerH1Text, $h1Header.lastChild)
-        let numberHeader = doc.createElement('h1') //numero
         let headerH12 = doc.createTextNode(' - ' + ajaxJson.phone)
-        let newH6 = numberHeader.appendChild(headerH12)
         $h1Header.appendChild(headerH12)
       },
 
@@ -86,7 +84,6 @@
       },
 
       handdleTable: function handdleTable(event){
-        console.log($color)
         event.preventDefault()
         $tbody.appendChild(app.createTr())
       },
