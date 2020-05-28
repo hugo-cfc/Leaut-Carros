@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="styles.css" rel="stylesheet" />
+    <title>Leaut</title>
+  </head>
+  <body>
+    <header data-js="header" ><h1 data-js="h1">TESTE</h1></header>
+      <form action="/" class="form" data-js="form">
+        <label>
+          <span>Imagem do carro:</span><br>
+          <input type="url" data-js="image"><br>
+        </label>
+        <label>
+          <span>Marca/Modelo:</span><br>
+          <input type="text" data-js="brand"><br>
+        </label>
+        <label>
+          <span>Ano:</span><br>
+          <input type="text" data-js="year"><br>
+        </label>
+        <label>
+          <span>Placa:</span><br>
+          <input type="text" data-js="licensePlate"><br>
+        </label>
+        <label>
+          <span>Cor:</span><br>
+          <input type="text" data-js="color"><br><br>
+        </label>
+        <button type="submit" data-js="button">Cadastrar</button>
+      </form>
+    <table class="table" data-js="table">
+      <thead>
+        <tr>
+          <th>Imagem do carro</th>
+          <th>Marca/Modelo</th>
+          <th>Ano</th>
+          <th>Placa</th>
+          <th>Cor</th>
+        </th>
+      </thead>
+      <tbody data-js="tbody">
+      </tbody>
+    </table>
+
+    <script src="dom.js"></script>
+    <script src="challenge-29.js"></script>
+  </body>
+</html>
