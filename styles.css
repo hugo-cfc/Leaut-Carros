@@ -1,0 +1,53 @@
+body{
+  background-color: red;
+  color: white;
+}
+
+header {
+  text-align: center;
+}
+
+
+label {
+  display: block;
+}
+
+input {
+  padding: 5px;
+  width: 300px;
+}
+
+button {
+  background-color: green;
+  color: white;
+  padding: 10px 20px;
+  border: 0;
+  border-radius: 5px;
+}
+
+button:hover,
+button:focus{
+  background: darkgreen;
+  cursor: pointer;
+}
+
+table {
+  color: white;
+  border-collapse: collapse;
+}
+
+form, table {
+  float: left;
+  width: 50%;
+}
+
+img {
+  max-width: 150px;
+  height: auto;
+}
+
+
+td, th {
+  border: 1px solid #ccc;
+  padding: 5px 15px;
+}
