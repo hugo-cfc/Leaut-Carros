@@ -9,6 +9,7 @@
     let $color = $('[data-js="color"]')
     let $button = $('[data-js="button"]')
     let $tbody = $('[data-js="tbody"]')
+    let $allInputs = $('input')
 
     let ajax = new XMLHttpRequest()
     let ajaxJson
@@ -71,6 +72,18 @@
         return colorTd
       },
 
+      createButtonRemove: function createButtonRemove() {
+        let buttonRemoveTd = doc.createElement('td')
+        buttonRemoveTd.innerHTML += `
+        <td>
+          <button onClick="app.removeTr()"data-js="buttonNumber-${$tbody.children.length + 1}">
+              Remover
+          </button>
+        </td>`
+        return buttonRemoveTd
+      },
+
+
       createTr: function createTr(){
         let fragmentTr = doc.createDocumentFragment()
         let tr = doc.createElement('tr')
@@ -79,13 +92,28 @@
         tr.appendChild(this.createYearTd())
         tr.appendChild(this.createLicensePlateTd())
         tr.appendChild(this.createColorTd())
+        tr.appendChild(this.createButtonRemove())
+        tr.setAttribute('data-js', `trNumber-${$tbody.children.length + 1}`)
         fragmentTr.appendChild(tr)
         return fragmentTr
+      },
+
+      removeTr: function removeTr() {
+        let element1 = $(`[data-js="buttonNumber-${tbody.children.length}"]`)
+        let element2 = element1.parentNode
+        $tbody.removeChild(element2.parentNode)
+      },
+
+      cleanInputs: function cleanInputs() {
+        $allInputs.map(function callBack(item, index){          
+          item.value = null
+        })
       },
 
       handdleTable: function handdleTable(event){
         event.preventDefault()
         $tbody.appendChild(app.createTr())
+        app.cleanInputs()
       },
 
       initListener: function initListener() {
