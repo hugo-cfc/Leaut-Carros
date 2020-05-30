@@ -1,5 +1,5 @@
 body{
-  background-color: red;
+  background-color: orange;
   color: white;
 }
 
@@ -31,6 +31,12 @@ button:focus{
   cursor: pointer;
 }
 
+.buttonRemove:hover,
+.buttonRemove:focus{
+  background: darkgreen;
+  cursor: pointer;
+}
+
 table {
   color: white;
   border-collapse: collapse;
@@ -49,5 +55,5 @@ img {
 
 td, th {
   border: 1px solid #ccc;
-  padding: 5px 15px;
+  padding: 5px 35px;
 }
